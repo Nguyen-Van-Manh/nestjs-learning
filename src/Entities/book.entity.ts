@@ -5,16 +5,16 @@ import { Document } from 'mongoose';
 
 @Schema()
 export class Book {
-  @Prop()
+  @Prop({type: Number, require: true, default: 0})
   id: number;
 
-  @Prop()
+  @Prop({type: String, require: true, default:''})
   subject: string;
 
-  @Prop()
+  @Prop({type: String, require: true, default: ''})
   title: string;
 
-  @Prop()
+  @Prop({type: Number, require: true, default: 0})
   price: number;
 
   @Prop()
